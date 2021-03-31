@@ -3,25 +3,295 @@
   <head>
     <!-- Required meta tags -->
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
 
-    <title>DahsBoard</title>
+    <title>Hello, world!</title>
   </head>
   <body>
 
 
-    <div class="container-fluid">
+<!-- <div>
+    
+</div> -->
+<div class="wrapper">
+    <!-- Sidebar -->
+    <nav id="sidebar">
+        <div class="sidebar-header">
+          <svg width="36" height="78" viewBox="0 0 36 78" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <g filter="url(#filter0_d)">
+            <path d="M5 57.0285L12.5595 21H23.5551L31 57.0285L17.141 69L5 57.0285Z" fill="#5527ED" stroke="#1C212E"/>
+            <ellipse cx="18" cy="9" rx="8" ry="9" fill="#5527ED"/>
+            </g>
+            <defs>
+            <filter id="filter0_d" x="0.45459" y="0" width="35.0945" height="77.6801" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+            <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+            <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"/>
+            <feOffset dy="4"/>
+            <feGaussianBlur stdDeviation="2"/>
+            <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0"/>
+            <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow"/>
+            <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow" result="shape"/>
+            </filter>
+            </defs>
+            </svg>
+            
+        </div>
+
+        <ul class=" nav flex-column list-unstyled components">
+            
+            <li class="nav-item">
+              <a class="navbar-brand" href="#">
+                <svg width="35" height="35" viewBox="0 0 31 31" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M15.5 15.5C18.3546 15.5 20.6667 13.1879 20.6667 10.3333C20.6667 7.47874 18.3546 5.16666 15.5 5.16666C12.6454 5.16666 10.3334 7.47874 10.3334 10.3333C10.3334 13.1879 12.6454 15.5 15.5 15.5ZM15.5 18.0833C12.0513 18.0833 5.16669 19.8142 5.16669 23.25V25.8333H25.8333V23.25C25.8333 19.8142 18.9488 18.0833 15.5 18.0833Z" fill="#5527ED"/>
+                  </svg>
+                DashBoard
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="navbar-brand" href="#">
+                <svg width="31" height="31" viewBox="0 0 20 31" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M12.9167 2.58334H2.58333C1.1625 2.58334 0.012917 3.74584 0.012917 5.16668L0 25.8333C0 27.2542 1.14958 28.4167 2.57042 28.4167H18.0833C19.5042 28.4167 20.6667 27.2542 20.6667 25.8333V10.3333L12.9167 2.58334ZM15.5 23.25H5.16667V20.6667H15.5V23.25ZM15.5 18.0833H5.16667V15.5H15.5V18.0833ZM11.625 11.625V4.52084L18.7292 11.625H11.625Z" fill="#5527ED"/>
+                  </svg>  
+                  Upload Files
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="navbar-brand" href="#">
+                <svg width="31" height="31" viewBox="0 0 31 31" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M23.25 2.58333H7.75002C6.32919 2.58333 5.16669 3.74583 5.16669 5.16666V25.8333C5.16669 27.2542 6.32919 28.4167 7.75002 28.4167H23.25C24.6709 28.4167 25.8334 27.2542 25.8334 25.8333V5.16666C25.8334 3.74583 24.6709 2.58333 23.25 2.58333ZM7.75002 5.16666H14.2084V15.5L10.9792 13.5625L7.75002 15.5V5.16666Z" fill="#5527ED"/>
+                  </svg> 
+                Favirote Jobs
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="navbar-brand" href="#">
+                <svg width="31" height="31" viewBox="0 0 31 31" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M25.8333 3.87501H24.5416V1.29167H21.9583V3.87501H9.04165V1.29167H6.45831V3.87501H5.16665C3.74581 3.87501 2.58331 5.0375 2.58331 6.45834V27.125C2.58331 28.5458 3.74581 29.7083 5.16665 29.7083H25.8333C27.2541 29.7083 28.4166 28.5458 28.4166 27.125V6.45834C28.4166 5.0375 27.2541 3.87501 25.8333 3.87501ZM25.8333 27.125H5.16665V10.3333H25.8333V27.125Z" fill="#5527ED"/>
+                  </svg>
+                  
+                Calander
+              </a>
+            </li>
+      
+
+        </ul>
+    </nav>
+
+</div>
+
+
+
+
+
+<div class="container">
+  <div class="row Usersettings">
+    <div class="col">
+      <div id=Usersettings>
+  
+            <a href="#">
+                <svg width="31" height="31" viewBox="0 0 31 31" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M12.9296 27.1379C12.9296 28.5588 14.0792 29.7083 15.5 29.7083C16.9208 29.7083 18.0704 28.5588 18.0704 27.1379H12.9296ZM24.3867 21.7258V14.2083C24.3867 10.0104 21.4804 6.49709 17.5538 5.56709V4.63709C17.5538 3.50043 16.6367 2.58334 15.5 2.58334C14.3633 2.58334 13.4462 3.50043 13.4462 4.63709V5.56709C9.51958 6.49709 6.61333 10.0104 6.61333 14.2083V21.7258L3.875 24.4642V25.8333H27.125V24.4642L24.3867 21.7258ZM20.6667 16.8046H16.7917V20.6796H14.2083V16.8046H10.3333V14.2083H14.2083V10.3333H16.7917V14.2083H20.6667V16.8046Z" fill="#5527ED"/>
+                </svg>
+            </a>
+
+       
+         
+
+        
+        <a  href="#">
+          <svg width="31" height="31" viewBox="0 0 31 31" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M24.7225 16.709C24.769 16.3215 24.8 15.9185 24.8 15.5C24.8 15.0815 24.769 14.6785 24.707 14.291L27.3265 12.245C27.559 12.059 27.621 11.718 27.4815 11.4545L25.0015 7.16101C24.8465 6.88201 24.521 6.78901 24.242 6.88201L21.1575 8.12201C20.5065 7.62601 19.8245 7.22301 19.065 6.91301L18.6 3.62701C18.5535 3.31701 18.29 3.10001 17.98 3.10001H13.02C12.71 3.10001 12.462 3.31701 12.4155 3.62701L11.9505 6.91301C11.191 7.22301 10.4935 7.64151 9.85801 8.12201L6.7735 6.88201C6.49451 6.77351 6.16901 6.88201 6.01401 7.16101L3.53401 11.4545C3.37901 11.7335 3.44101 12.059 3.68901 12.245L6.30851 14.291C6.24651 14.6785 6.20001 15.097 6.20001 15.5C6.20001 15.903 6.23101 16.3215 6.29301 16.709L3.67351 18.755C3.44101 18.941 3.37901 19.282 3.51851 19.5455L5.99851 23.839C6.15351 24.118 6.47901 24.211 6.75801 24.118L9.84251 22.878C10.4935 23.374 11.1755 23.777 11.935 24.087L12.4 27.373C12.462 27.683 12.71 27.9 13.02 27.9H17.98C18.29 27.9 18.5535 27.683 18.5845 27.373L19.0495 24.087C19.809 23.777 20.5065 23.3585 21.142 22.878L24.2265 24.118C24.5055 24.2265 24.831 24.118 24.986 23.839L27.466 19.5455C27.621 19.2665 27.559 18.941 27.311 18.755L24.7225 16.709ZM15.5 20.15C12.9425 20.15 10.85 18.0575 10.85 15.5C10.85 12.9425 12.9425 10.85 15.5 10.85C18.0575 10.85 20.15 12.9425 20.15 15.5C20.15 18.0575 18.0575 20.15 15.5 20.15Z" fill="#5527ED"/>
+          </svg>
+       </a>
+         
+          <h1 id="user">A</h1>
+            
+      </div>
+   
        
     </div>
-    
+  </div>
+</div>
 
-    <!-- Optional JavaScript -->
-    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+  <div class="container">
+    <div class="row nav1">
+      <div class="col">
+        <h1 id="mainHeading">DashBoard</h1>
+      </div>
+      <div class="col topNavListing">
+        <h3>Most recent job listings</h3>
+      </div>
+
+      <div class="col">
+        <div class="dropdown">
+          <button class="btn btn-secondary btn-sm dropdown-toggle" type="button" id="dropdownMenuButton2" data-bs-toggle="dropdown" aria-expanded="false">
+            Filter Job board
+          </button>
+          <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="dropdownMenuButton2">
+            <li><a class="dropdown-item active" href="#">Indeed</a></li>
+            <li><a class="dropdown-item" href="#">GlassDoor</a></li>
+            <li><a class="dropdown-item" href="#">Dice</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="col">
+        <h3>See all events -></h3>>
+      </div>
+
+    </div>
+
+<div class="container">
+  <div class="row">
+    <div class="col forum">
+
+      
+      <form type>
+
+        <h2 id= jobcardinputForm>Add jobs to apply to</h2>
+        <div class="mb-3">
+         
+          <input type="input" class="form-control" id="exampleFormControlInput1" placeholder="JobName">
+        
+  
+  
+       
+       
+          <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="Job Role">
+      
+        
+  
+         
+          <input type="input" class="form-control" id="exampleFormControlInput1" placeholder="Job Link">
+    
+  
+        
+        
+    
+          <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+     
+
+        <button type="submit" value="Submit" class="btn btn-primary btn-lg">Large button</button>
+
+      </div>
+
+      </form>
+
+    </div>
+
+
+    <div class="col DashBoard">
+      <div class="row">
+        <div class="col">
+            <div class="card"">
+              <div class="card-body">
+           
+                <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                <a href="#" class="btn btn-primary">Go somewhere</a>
+              </div>
+            </div>
+        </div>
+        <div class="col">
+          <div class="card"">
+            <div class="card-body">
+           
+              <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+              <a href="#" class="btn btn-primary">Go somewhere</a>
+            </div>
+          </div>
+      </div>
+
+      <div class="col">
+            <div class="card"">
+              <div class="card-body">
+      
+                <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                <a href="#" class="btn btn-primary">Go somewhere</a>
+              </div>
+            </div>
+        </div>
+      </div>
+      
+
+    </div>
+
+    
+  </div>
+
+
+  <div class="container">
+    <div class="row nav2">
+      <div class="col ">
+        <h3>Recent jobs</h3>
+      </div>
+      <div class="col">
+        <h3>See all applied jobs  -></h3>
+      </div>
+
+      <div class="col">
+        <h3>Current events for today</h3>
+      </div>
+
+      <div class="col">
+        <h3>See all events -></h3>>
+      </div>
+
+    </div>
+
+    <div class="container">
+      <div class="row nav3">
+        <div class="col ">
+          <h3 id="jobinfo">Company: JobTitle: Date:</h3>
+        </div>
+        
+  
+      </div>
+
+
+    <div class="container">
+      <div class="row">
+        <div class="col">
+          <div class="card cardOveright">
+            <div class="card-header">
+              <p id="jobinfocard">Facebook FrontEnd Date</p>
+            </div>
+
+          </div>
+        </div>
+        <div class="col">
+          <div class="card recentJobCard">
+            <div class="row">
+              <div class="col">
+                <h5 class="card-header notification">Featured</h5>
+              </div>
+
+              <div class="col">
+                <h5 class="card-header notficationdate">Featured</h5>
+              </div>
+
+            </div>
+           
+
+
+            <div class="card-body">
+              <h5 class="card-title">Special title treatment</h5>
+              <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+              <a href="#" class="btn btn-primary">Go somewhere</a>
+            </div>
+          </div>
+        </div>
+    </div>
+
+
+
+</div>
+
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js" integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="index.css">
   </body>
 </html>

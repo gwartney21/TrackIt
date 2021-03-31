@@ -1,0 +1,330 @@
+
+
+body{
+background:rgba(23, 28, 40, 1);
+}
+
+.col1{
+    position: absolute;
+    width: 187px;
+    height: 49px;
+    left: 301px;
+    top: 132px;
+}
+
+.col1 h1{
+    color: #FFFFFF;
+}
+
+.col2{
+    position: absolute;
+    width: 232px;
+    height: 24px;
+    left: 716px;
+    top: 9rem;
+    
+}
+
+
+ul{
+    position: absolute;
+    width: 111px;
+    height: 257px;
+    left: 108px;
+    top: 175px;
+
+}
+
+
+
+#apply{
+    position: absolute;
+    width: 389px;
+    height: 388px;
+    left: 305px;
+    top: 190px;
+    
+    background: #FFFFFF;
+    border-radius: 5px
+}
+
+#jobs{
+    position: absolute;
+    width: 55%;
+    left: 712px;
+    top: 187px;
+    height: 45rem;
+    background: #121621;
+    border-radius: 5px;
+}
+
+#recent{
+position: absolute;
+width: 200px;
+height: 24px;
+left: 305px;
+top: 641px;
+
+font-family: Noto Serif Telugu;
+font-style: normal;
+font-weight: bold;
+font-size: 18px;
+line-height: 24px;
+text-align: right;
+}
+
+#all{
+    position: absolute;
+width: 155px;
+height: 19px;
+left: 673px;
+top: 643px;
+
+font-family: Noto Serif Telugu;
+font-style: normal;
+font-weight: bold;
+font-size: 14px;
+line-height: 19px;
+/* identical to box height */
+
+text-align: right;
+
+color: #727272;
+}
+
+#current{
+    position: absolute;
+width: 223px;
+height: 24px;
+left: 883px;
+top: 640px;
+
+font-family: Noto Serif Telugu;
+font-style: normal;
+font-weight: bold;
+font-size: 18px;
+line-height: 24px;
+text-align: right;
+
+color: #FFFFFF;
+}
+
+#events{
+    
+position: absolute;
+width: 112px;
+height: 19px;
+left: 1203px;
+top: 643px;
+
+font-family: Noto Serif Telugu;
+font-style: normal;
+font-weight: bold;
+font-size: 14px;
+line-height: 19px;
+/* identical to box height */
+
+text-align: right;
+
+color: #727272;
+}
+
+.list-group {
+position: absolute;
+width: 539px;
+height: 36px;
+left: 295px;
+top: 698px;
+}
+
+.currentevent{
+    position: absolute;
+    width: 493px;
+    height: 90px;
+    left: 884px;
+    top: 58rem;
+   
+}
+
+.notifi{
+    position: absolute;
+width: 31px;
+height: 31px;
+left: 97rem;
+top: 73px;
+
+}
+
+.settings{
+    
+position: absolute;
+width: 31px;
+height: 31px;
+left: 100rem;
+top: 73px;
+}
+
+.recentjob{
+position: absolute;
+height: 36px;
+left: 295px;
+top:58rem;
+
+}
+
+
+
+.wrapper {
+    display: flex;
+    width: 100%;
+    align-items: stretch;
+}
+
+#sidebar {
+    position: fixed;
+    background: rgba(22, 27, 38, 1);
+    color: #fff;
+    transition: all 0.3s;
+    min-width: 250px;
+    max-width: 250px;
+    min-height: 100vh;
+}
+
+.DashBoard{
+    width: 650px;
+    height: 391px;
+    left: 712px;
+    top: 187px;
+    
+    background: #121621;
+    border-radius: 5px;
+    margin-left:1rem;
+}
+
+.forum{
+    width: 389px;
+    height: 388px;
+    left: 305px;
+    top: 190px;
+    
+    background: #FFFFFF;
+    border-radius: 5px;
+}
+
+.cardOveright {
+    background: #1C212E;
+}
+
+.recentJobCard{
+    background-color: transparent;
+    border: none;
+}
+
+.notficationdate{
+    background-color: transparent;
+    border: none;
+}
+
+.notification{
+    background: #1C212E;
+    margin-right: 10rem;
+    color: white;
+}
+
+.nav1{
+    margin-top: 5rem;
+}
+
+h3{
+color: white;
+font-family: Noto Serif Telugu;
+font-style: normal;
+font-weight: bold;
+font-size: 18px;
+line-height: 24px;
+
+}
+
+.topNavListing{
+    margin-left: 28rem;
+}
+
+.nav2{
+    margin-top: 3rem;
+}
+
+.nav3{
+    margin-left: 1rem;
+}
+
+#jobinfo{
+    word-spacing: 10rem;
+}
+
+#jobinfocard{
+    word-spacing: 10rem;
+    padding-top: 1rem;
+    padding-left: 2rem;
+    color: white;
+}
+
+h5{
+    color:white;
+}
+
+p{
+    color:white;
+}
+
+.forum{
+    height: auto;
+}
+
+#jobcardinputForm{
+    padding-top: 1rem;
+}
+
+#mainHeading{
+    color:white;
+}
+
+.list-unstyled components{
+    margin-left: -4rem;
+    margin-top: 1rem;
+}
+
+#Usersettings{
+    margin-left: 67rem;
+    margin-top: 1rem;
+}
+
+#user{
+    display: inline;
+    background: white;
+    padding-left: 1rem;
+    padding-bottom: 1rem;
+    padding-right: 1rem;
+    border-radius: 5%;
+    margin-left: 1rem;
+}
+
+.btn{
+    background-color: rgba(85, 39, 237, 1);
+    border: none;
+}
+
+.sidebar-header{
+    position: absolute;
+width: 26px;
+height: 69px;
+margin-left: 10rem;
+top: 59px;
+}
+
+.card{
+    margin-top: 1rem;
+}
+
+p{
+    color: black;
+}
