@@ -1,0 +1,43 @@
+body{
+    background-color:rgba(23, 28, 40, 1);
+}
+
+
+/*
+Side nav bar styling
+*/
+#sidebar {
+    position: fixed;
+    background: rgba(22, 27, 38, 1);
+    color: #fff;
+    transition: all 0.3s;
+    min-width: 270px;
+    min-height: 100vh;
+}
+
+
+#customDesign{
+    
+position: absolute;
+bottom: 0;
+
+}
+
+/* End Side Bar */
+
+#footer{
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+}
+
+ .forum{
+    width: 389px;
+    height: 388px;
+    left: 305px;
+    top: 190px;
+    
+    background: #FFFFFF;
+    border-radius: 5px;
+}

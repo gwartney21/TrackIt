@@ -14,11 +14,6 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('dashboardMain');
 });
 
-Route::get('/FaviroteJobs');
-
-Route::get('/JobsApliedTo');
-
-Route::get('php artisan breeze:install');
