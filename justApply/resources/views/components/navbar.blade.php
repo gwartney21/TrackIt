@@ -5,7 +5,7 @@
     <nav id="sidebar">
         
         <div class="sidebar-header">
-          <svg width="36" height="78" viewBox="0 0 36 78" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <svg id="logo" width="36" height="78" viewBox="0 0 36 78" fill="none" xmlns="http://www.w3.org/2000/svg">
             <g filter="url(#filter0_d)">
             <path d="M5 57.0285L12.5595 21H23.5551L31 57.0285L17.141 69L5 57.0285Z" fill="#5527ED" stroke="#1C212E"/>
             <ellipse cx="18" cy="9" rx="8" ry="9" fill="#5527ED"/>
