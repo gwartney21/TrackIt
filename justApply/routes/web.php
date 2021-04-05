@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-
+use App\Http\Controllers\jobsController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -13,7 +13,16 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('dashboardMain');
+
+
+Route::get('/dashboard', function(){
+    return view('dashboard');
 });
 
+
+Route::get('/', [jobsController::class,'index'])->middleware(['auth'])->name('dashboard');
+
+Route::post('/', [jobsController::class,'store']);
+
+
+require __DIR__.'/auth.php';

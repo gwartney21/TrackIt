@@ -28,4 +28,7 @@ class dashboard extends Component
     {
         return view('components.dashboard');
     }
+
+
+   
 }
