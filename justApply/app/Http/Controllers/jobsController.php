@@ -26,8 +26,6 @@ class jobsController extends Controller
         //     'JobName' => 'required|max:255',
         // ]);
         
-              
-       
         $request->user()->jobs()->create([
             'JobName' => $request->JobName,
             'JobRole' => $request->JobRole,

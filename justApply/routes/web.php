@@ -24,5 +24,17 @@ Route::get('/', [jobsController::class,'index'])->middleware(['auth'])->name('da
 
 Route::post('/', [jobsController::class,'store']);
 
+Route::get('/jobList',function(){
+     //Get list of jobs display on page pass to route   
+    $jobs = DB::table('jobs')->get();
+
+    //dd($users);
+
+    return view('jobList',[
+        "job"=>$jobs
+    ]);
+
+ 
+});
 
 require __DIR__.'/auth.php';
