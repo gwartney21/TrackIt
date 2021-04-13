@@ -40,4 +40,12 @@ class User extends Authenticatable
     protected $casts = [
         'email_verified_at' => 'datetime',
     ];
+
+
+     //This will describe the model relation ship. The user model will have 
+    //access to many tasks models 
+    public function jobs()
+    {
+        return $this->hasMany(jobs::class);
+    }
 }

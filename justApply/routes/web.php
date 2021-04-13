@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-
+use App\Http\Controllers\jobsController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -13,12 +13,28 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
+
+
+Route::get('/dashboard', function(){
+    return view('dashboard');
 });
 
-Route::get('/FaviroteJobs');
 
-Route::get('/JobsApliedTo');
+Route::get('/', [jobsController::class,'index'])->middleware(['auth'])->name('dashboard');
 
-Route::get('php artisan breeze:install');
+Route::post('/', [jobsController::class,'store']);
+
+Route::get('/jobList',function(){
+     //Get list of jobs display on page pass to route   
+    $jobs = DB::table('jobs')->get();
+
+    //dd($users);
+
+    return view('jobList',[
+        "job"=>$jobs
+    ]);
+
+ 
+});
+
+require __DIR__.'/auth.php';
