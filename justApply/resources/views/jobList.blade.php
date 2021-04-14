@@ -14,6 +14,17 @@
     
     <x-navbar/>
     
+
+    <nav class="navbar">
+      <form class="form-inline" action="/search" method="POST" role="search">
+        {{ csrf_field() }}
+        <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search" name="search">
+        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+      </form>
+  </nav>
+
+
+
     <div class="container">
       <div class="card-deck">
         @foreach($job as $jobs)

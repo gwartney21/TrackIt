@@ -3,7 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\jobsController;
 use Illuminate\Support\Facades\Auth;
-
+use Illuminate\Http\Request;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -35,6 +35,17 @@ Route::get('/jobList',function(){
     return view('jobList',[
         "job"=>$jobs
     ]);
+});
+
+Route::any('/search',function(Request $request){
+
+   //$jobs= DB::table('jobs')->where('user_id', $id)->paginate(20);
+   
+   $name = $request->input('search');
+
+   dd($name);
+
+   return view('jobList');
 });
 
 require __DIR__.'/auth.php';
