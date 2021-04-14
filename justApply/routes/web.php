@@ -2,6 +2,8 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\jobsController;
+use Illuminate\Support\Facades\Auth;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -26,15 +28,13 @@ Route::post('/', [jobsController::class,'store']);
 
 Route::get('/jobList',function(){
      //Get list of jobs display on page pass to route   
-    $jobs = DB::table('jobs')->get();
-
-    //dd($users);
+   // $jobs = DB::table('jobs')->get();
+    $id = Auth::id();
+    $jobs= DB::table('jobs')->where('user_id', $id)->paginate(20);
 
     return view('jobList',[
         "job"=>$jobs
     ]);
-
- 
 });
 
 require __DIR__.'/auth.php';

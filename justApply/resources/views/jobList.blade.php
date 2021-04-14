@@ -15,34 +15,33 @@
     <x-navbar/>
     
     <div class="container">
-    <div class="row">
-      @foreach($job as $jobs)
-     
-        <ul>
-        <div class="col">
-          <li>
-            <h3>{{$jobs->JobName}}</h3>
-            <h3>{{$jobs->jobRole}}</h3>
-            <h3>{{$jobs->jobLink}}</h3>
-            <h3>{{$jobs->jobInfo}}</h3>
-          </li>
-          </div>
-        </ul>
-  
+      <div class="card-deck">
+        @foreach($job as $jobs)
       
-      @endforeach
+          <div class="card">
+            <div class="card-body">
+              <h5>{{$jobs->JobName}}</h5>
+              <h4>{{$jobs->jobRole}}</h4>
+              <a>{{$jobs->jobLink}}</a>
+              <p>{{$jobs->jobInfo}}</p>
+                </div>
+            </div>
 
+      @endforeach
   </div>
 
+  <div class="container">
+
+      {{$job->links()}}
+  </div>
+
+</div>
 
 
-    </div>
 
 
 
-
-
-    <link rel="stylesheet" href="{{asset('css/index.css')}}">
+    <link rel="stylesheet" href="{{asset('css/jobList.css')}}">
 
 
   </body>
