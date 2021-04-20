@@ -20,6 +20,7 @@ class Jobs extends Migration
             $table->string('jobRole');
             $table->string('jobLink');
             $table->string('jobInfo');
+            $table->string('status');
             $table->timestamps();
         });
     }

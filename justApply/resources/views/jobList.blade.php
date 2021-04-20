@@ -10,34 +10,61 @@
 
     <title>Hello, world!</title>
   </head>
+
   <body>
     
     <x-navbar/>
     
 
-    <nav class="navbar">
-      <form class="form-inline" action="/search" method="POST" role="search">
-        {{ csrf_field() }}
-        <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search" name="search">
-        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-      </form>
-  </nav>
+
+  <div class="container">
+
+
+    <form  action="/search" method="POST" class="form-inline">
+    {{ csrf_field() }}
+      <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search" name="search">
+      <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+    </form>
+
+  </div>
 
 
 
-    <div class="container">
+
       <div class="card-deck">
         @foreach($job as $jobs)
-      
           <div class="card">
             <div class="card-body">
-              <h5>{{$jobs->JobName}}</h5>
+              <div class="row">
+                <div class="col">
+                    <h5>{{$jobs->JobName}}</h5>
+                </div>
+                <div class="col">
+                    <h5>{{$jobs->status}}</h5>
+                </div>
+              </div>
               <h4>{{$jobs->jobRole}}</h4>
               <a>{{$jobs->jobLink}}</a>
               <p>{{$jobs->jobInfo}}</p>
-                </div>
-            </div>
-
+                    
+                <div class="col">
+                
+                <form class="changeData" method="POST" action="/update">
+                              @csrf
+                              @method('PUT')
+                    <input name="update" value="{{$jobs->id}}" type="hidden" />
+                    <button class="btn btn-primary " type="submit">Update</button>
+                </form>  
+                
+                <form class="changeData" method="POST" action="/delete">
+                              @csrf
+                              @method('delete')
+                              <input name="deleteId" value="{{$jobs->id}}" type="hidden" />
+                              <button class="btn btn-primary " type="submit">delete</button>
+                           </form>
+                         </div>
+                    </div>
+              </div>
       @endforeach
   </div>
 

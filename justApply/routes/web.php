@@ -24,13 +24,13 @@ Route::get('/dashboard', function(){
 
 Route::get('/', [jobsController::class,'index'])->middleware(['auth'])->name('dashboard');
 
+
 Route::post('/', [jobsController::class,'store']);
 
 Route::get('/jobList',function(){
-     //Get list of jobs display on page pass to route   
-   // $jobs = DB::table('jobs')->get();
+
     $id = Auth::id();
-    $jobs= DB::table('jobs')->where('user_id', $id)->paginate(20);
+    $jobs= DB::table('jobs')->where('user_id', $id)->paginate(10);
 
     return view('jobList',[
         "job"=>$jobs
@@ -39,13 +39,63 @@ Route::get('/jobList',function(){
 
 Route::any('/search',function(Request $request){
 
-   //$jobs= DB::table('jobs')->where('user_id', $id)->paginate(20);
-   
+    $id = Auth::id();
+
    $name = $request->input('search');
 
-   dd($name);
+   $jobs= DB::table('jobs')->where('user_id', $id)->where('JobName', 'LIKE', '%' . $name . '%')->paginate(20);
 
-   return view('jobList');
+   return view('jobList',[
+       "job"=>$jobs
+   ]);
 });
+
+Route::delete('/delete/',function(Request $request){
+
+    $id = $request->input('deleteId');
+
+    $jobs = DB::table('jobs')->where('id', $id)->delete();
+
+    return redirect('jobList');
+});
+
+Route::put('/update',function(Request $request){
+
+    $id = $request->input('update');
+
+    $jobs = DB::table('jobs')->where('id', $id)->get();
+    
+    return view('update',[
+       "job"=>$jobs,
+       'id'=>$id
+    ]);
+});
+
+Route::post('/updateStatus',function(Request $request){
+    
+    $id = $request->input('updateStatus');
+    $checkbox =  $request->only(['applied', 'waiting','interview','denied','hired']);
+    
+   if($checkbox['waiting']==="waiting for reply" ){
+       $status = $checkbox['waiting'];
+
+       $tableToUpdate = DB::table('jobs')->where('id', $id)->get();
+       $getVal = $tableToUpdate[0]->status  = $status;
+
+        DB::table('jobs')->where('id', $id)
+        ->update(['status' => $getVal]);
+        
+        return redirect('/jobList');
+
+   }else{
+       dd('failed');
+   }
+
+
+   
+    return view('update');
+});
+
+
 
 require __DIR__.'/auth.php';

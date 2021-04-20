@@ -27,6 +27,7 @@ class jobsFactory extends Factory
             'jobRole' => $this->faker->text(),
             'jobLink' => $this->faker->text(),
             'jobInfo' => $this->faker->text(),
+            'status'  => 'applied',
             'user_id' => User::all()->random()->id,
         ];
     }
