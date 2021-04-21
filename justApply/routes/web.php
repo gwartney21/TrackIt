@@ -74,10 +74,12 @@ Route::put('/update',function(Request $request){
 Route::post('/updateStatus',function(Request $request){
     
     $id = $request->input('updateStatus');
-    $checkbox =  $request->only(['applied', 'waiting','interview','denied','hired']);
     
-   if($checkbox['waiting']==="waiting for reply" ){
-       $status = $checkbox['waiting'];
+    
+    $data = $request->input('update');
+
+   if($data === "waiting for reply" ){
+       $status = 'waiting';
 
        $tableToUpdate = DB::table('jobs')->where('id', $id)->get();
        $getVal = $tableToUpdate[0]->status  = $status;
@@ -87,8 +89,55 @@ Route::post('/updateStatus',function(Request $request){
         
         return redirect('/jobList');
 
-   }else{
-       dd('failed');
+   }else if($data ==="applied"){
+       $status = 'applied';
+
+       
+       $tableToUpdate = DB::table('jobs')->where('id', $id)->get();
+       $getVal = $tableToUpdate[0]->status  = $status;
+
+        DB::table('jobs')->where('id', $id)
+        ->update(['status' => $getVal]);
+        
+        return redirect('/jobList');
+       
+   }else if($data === "interview"){
+        $status = $checkbox['interview'];
+
+        
+       $tableToUpdate = DB::table('jobs')->where('id', $id)->get();
+       $getVal = $tableToUpdate[0]->status  = $status;
+
+        DB::table('jobs')->where('id', $id)
+        ->update(['status' => $getVal]);
+        
+        return redirect('/jobList');
+
+
+   }else if($checkbox === "denied"){
+        $status = $checkbox['denied'];
+
+        
+       $tableToUpdate = DB::table('jobs')->where('id', $id)->get();
+       $getVal = $tableToUpdate[0]->status  = $status;
+
+        DB::table('jobs')->where('id', $id)
+        ->update(['status' => $getVal]);
+        
+        return redirect('/jobList');
+
+
+   }else if($data === "hired"){
+        $status = $checkbox['hired'];
+
+        
+       $tableToUpdate = DB::table('jobs')->where('id', $id)->get();
+       $getVal = $tableToUpdate[0]->status  = $status;
+
+        DB::table('jobs')->where('id', $id)
+        ->update(['status' => $getVal]);
+        
+        return redirect('/jobList');
    }
 
 

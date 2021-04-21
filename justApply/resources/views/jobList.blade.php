@@ -39,12 +39,12 @@
                 <div class="col">
                     <h5>{{$jobs->JobName}}</h5>
                 </div>
-                <div class="col">
+                <div class="col status">
                     <h5>{{$jobs->status}}</h5>
                 </div>
               </div>
               <h4>{{$jobs->jobRole}}</h4>
-              <a>{{$jobs->jobLink}}</a>
+              <a href="{{$jobs->jobLink}}">{{$jobs->jobLink}}</a>
               <p>{{$jobs->jobInfo}}</p>
                     
                 <div class="col">

@@ -30,21 +30,21 @@
               <form class="changeData" method="POST" action="/updateStatus">
               @csrf
                 <div class="form-check">
-                      <input class="form-check-input" type="checkbox" name="applied" value="applied" id="defaultCheck1">
+                      <input class="form-check-input" type="checkbox" name="update" value="applied" id="defaultCheck1">
                       <label class="form-check-label" for="defaultCheck1">
                          applied
                       </label>
                 </div>
 
                 <div class="form-check">
-                      <input class="form-check-input" type="checkbox" name="waiting" value="waiting for reply" id="defaultCheck1">
+                      <input class="form-check-input" type="checkbox" name="update" value="waiting for reply" id="defaultCheck1">
                       <label class="form-check-label" for="defaultCheck1">
                           Waiting for Reply
                       </label>
                 </div>
 
                 <div class="form-check">
-                      <input class="form-check-input" type="checkbox" name="interview" value="interview" id="defaultCheck1">
+                      <input class="form-check-input" type="checkbox" name="update" value="interview" id="defaultCheck1">
                       <label class="form-check-label" for="defaultCheck1">
                          Interviewing
                       </label>
@@ -52,7 +52,7 @@
 
                  
                 <div class="form-check">
-                      <input class="form-check-input" type="checkbox" name="denied" value="denied" id="defaultCheck1">
+                      <input class="form-check-input" type="checkbox" name="update" value="denied" id="defaultCheck1">
                       <label class="form-check-label" for="defaultCheck1">
                          Denied
                       </label>
@@ -83,12 +83,12 @@
                 <div class="col">
                     <h5>{{$jobs->JobName}}</h5>
                 </div>
-                <div class="col">
+                <div class="col status">
                     <h5>{{$jobs->status}}</h5>
                 </div>
               </div>
               <h4>{{$jobs->jobRole}}</h4>
-              <a>{{$jobs->jobLink}}</a>
+              <a href="{{$jobs->jobLink}}">{{$jobs->jobLink}}</a>
               <p>{{$jobs->jobInfo}}</p>
             @endforeach
          
@@ -106,8 +106,7 @@
 
 
 
-    <link rel="stylesheet" href="{{asset('css/jobList.css')}}">
-
+    <link rel="stylesheet" href="{{asset('css/update.css')}}">
 
   </body>
 </html>
