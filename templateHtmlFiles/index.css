@@ -35,6 +35,9 @@ ul{
 
 }
 
+.navbar-brand{
+    margin-top: 2rem;
+}
 
 
 #apply{
@@ -314,7 +317,7 @@ p{
 }
 
 .sidebar-header{
-    position: absolute;
+position: absolute;
 width: 26px;
 height: 69px;
 margin-left: 10rem;

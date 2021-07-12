@@ -12,25 +12,10 @@
   </head>
 
   <body>
-    
-    <x-navbar/>
-    
 
+  <x-navbar/>
 
   <div class="container">
-
-
-    <form  action="/search" method="POST" class="form-inline">
-    {{ csrf_field() }}
-      <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search" name="search">
-      <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-    </form>
-
-  </div>
-
-
-
-
       <div class="card-deck">
         @foreach($job as $jobs)
           <div class="card">
@@ -49,7 +34,7 @@
                     
                 <div class="col">
                 
-                <form class="changeData" method="POST" action="/update">
+                <form class="changeData" action="/update">
                               @csrf
                               @method('PUT')
                     <input name="update" value="{{$jobs->id}}" type="hidden" />
@@ -67,7 +52,7 @@
               </div>
       @endforeach
   </div>
-
+</div>
   <div class="container">
 
       {{$job->links()}}

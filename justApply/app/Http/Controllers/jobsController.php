@@ -20,12 +20,6 @@ class jobsController extends Controller
     public function store(Request $request)
     {
 
-
-
-        // $this->validate($request, [
-        //     'JobName' => 'required|max:255',
-        // ]);
-        
         $request->user()->jobs()->create([
             'JobName' => $request->JobName,
             'JobRole' => $request->JobRole,

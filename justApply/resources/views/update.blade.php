@@ -20,8 +20,6 @@
 
 <div class="container">
 
-<h1>{{$id}}</h1>
-
   <div class="row">
 
   <div class="col">
@@ -60,7 +58,7 @@
 
                  
                 <div class="form-check">
-                      <input class="form-check-input" type="checkbox" value="hired" id="defaultCheck1">
+                      <input class="form-check-input" type="checkbox" name="update" value="hired" id="defaultCheck1">
                       <label class="form-check-label" for="defaultCheck1">
                          Hired
                       </label>

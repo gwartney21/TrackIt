@@ -3,34 +3,6 @@ body{
 }
 
 
-/*
-Side nav bar styling
-*/
-#sidebar {
-    position: fixed;
-    background: rgba(22, 27, 38, 1);
-    color: #fff;
-    transition: all 0.3s;
-    min-width: 270px;
-    min-height: 100vh;
-}
-
-#logo{
-    margin-left: 5rem;
-    margin-top: 4rem;
-}
-
-ul{
-    margin-left: 1rem;
-}
-#customDesign{
-    
-position: fixed;
-bottom: 0;
-
-}
-
-/* End Side Bar */
 
 #footer{
     position: fixed;
@@ -42,19 +14,10 @@ bottom: 0;
 
 /*Input forum styling */
 
-#DashboardHeaderMain{
-    padding-bottom: 1rem;
-    padding-top: 1rem;
-    margin-left:9rem;
-    color: white;
-}
  form{
     width: 389px;
     height: auto;
-    left: 305px;
     margin-top: 1rem;
-    
-    background: #FFFFFF;
     border-radius: 5px;
 }
 
@@ -77,9 +40,6 @@ bottom: 0;
     margin-bottom: 1rem;
 }
 
-/* .row{
-    margin-left: 27rem;
-} */
 /* End Input forum styling */
 
 /* Events dashboard colum styling */
@@ -94,36 +54,16 @@ bottom: 0;
     flex: auto;
     height:auto;
     margin-bottom: 1rem;
-}
-.card-deck{
-    margin-left: 20%;
-    margin-right: 5%;
-}
-
-.card{
-    margin-left: 15px;
     width: 30%;
-   
 }
 
 /* Form search bar */
-
-form{
-    background: none;
-    margin-left: 30rem;
-    margin-bottom: 2rem;
-    margin-top: 3rem;
-}
-
 .form-control{
     margin-left: -12rem;
    margin-top: 0px;
 }
 
-.btn btn-outline-success my-2 my-sm-0{
-    width: 87%;
 
-}
 
 .changeData{
     margin-left: 1px;

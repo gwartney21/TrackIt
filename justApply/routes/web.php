@@ -2,7 +2,9 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\jobsController;
+use App\Http\Controllers\joblistController;
 use Illuminate\Support\Facades\Auth;
+use App\Models\jobs;
 use Illuminate\Http\Request;
 /*
 |--------------------------------------------------------------------------
@@ -21,129 +23,20 @@ Route::get('/dashboard', function(){
     return view('dashboard');
 });
 
-
 Route::get('/', [jobsController::class,'index'])->middleware(['auth'])->name('dashboard');
-
 
 Route::post('/', [jobsController::class,'store']);
 
-Route::get('/jobList',function(){
+Route::get('/jobList',[joblistController::class,'index']);
+  
+Route::any('/search',[joblistController::class,'search']);
 
-    $id = Auth::id();
-    $jobs= DB::table('jobs')->where('user_id', $id)->paginate(10);
+Route::delete('/delete',[joblistController::class,'delete']);
 
-    return view('jobList',[
-        "job"=>$jobs
-    ]);
-});
-
-Route::any('/search',function(Request $request){
-
-    $id = Auth::id();
-
-   $name = $request->input('search');
-
-   $jobs= DB::table('jobs')->where('user_id', $id)->where('JobName', 'LIKE', '%' . $name . '%')->paginate(20);
-
-   return view('jobList',[
-       "job"=>$jobs
-   ]);
-});
-
-Route::delete('/delete/',function(Request $request){
-
-    $id = $request->input('deleteId');
-
-    $jobs = DB::table('jobs')->where('id', $id)->delete();
-
-    return redirect('jobList');
-});
-
-Route::put('/update',function(Request $request){
-
-    $id = $request->input('update');
-
-    $jobs = DB::table('jobs')->where('id', $id)->get();
-    
-    return view('update',[
-       "job"=>$jobs,
-       'id'=>$id
-    ]);
-});
-
-Route::post('/updateStatus',function(Request $request){
-    
-    $id = $request->input('updateStatus');
-    
-    
-    $data = $request->input('update');
-
-   if($data === "waiting for reply" ){
-       $status = 'waiting';
-
-       $tableToUpdate = DB::table('jobs')->where('id', $id)->get();
-       $getVal = $tableToUpdate[0]->status  = $status;
-
-        DB::table('jobs')->where('id', $id)
-        ->update(['status' => $getVal]);
-        
-        return redirect('/jobList');
-
-   }else if($data ==="applied"){
-       $status = 'applied';
-
-       
-       $tableToUpdate = DB::table('jobs')->where('id', $id)->get();
-       $getVal = $tableToUpdate[0]->status  = $status;
-
-        DB::table('jobs')->where('id', $id)
-        ->update(['status' => $getVal]);
-        
-        return redirect('/jobList');
-       
-   }else if($data === "interview"){
-        $status = $checkbox['interview'];
-
-        
-       $tableToUpdate = DB::table('jobs')->where('id', $id)->get();
-       $getVal = $tableToUpdate[0]->status  = $status;
-
-        DB::table('jobs')->where('id', $id)
-        ->update(['status' => $getVal]);
-        
-        return redirect('/jobList');
+Route::get('/update',[joblistController::class,'update']);
 
 
-   }else if($checkbox === "denied"){
-        $status = $checkbox['denied'];
-
-        
-       $tableToUpdate = DB::table('jobs')->where('id', $id)->get();
-       $getVal = $tableToUpdate[0]->status  = $status;
-
-        DB::table('jobs')->where('id', $id)
-        ->update(['status' => $getVal]);
-        
-        return redirect('/jobList');
-
-
-   }else if($data === "hired"){
-        $status = $checkbox['hired'];
-
-        
-       $tableToUpdate = DB::table('jobs')->where('id', $id)->get();
-       $getVal = $tableToUpdate[0]->status  = $status;
-
-        DB::table('jobs')->where('id', $id)
-        ->update(['status' => $getVal]);
-        
-        return redirect('/jobList');
-   }
-
-
-   
-    return view('update');
-});
+Route::post('/updateStatus',[joblistController::class,'updateList']);
 
 
 

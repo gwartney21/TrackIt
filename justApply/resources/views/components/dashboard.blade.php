@@ -1,7 +1,6 @@
 
 <div class="container">
 
-   
   <div class="row">
     <div class="col">
     <h1 id="DashboardHeaderMain">Apply!</h2>
@@ -26,8 +25,6 @@
       </form>
    </div>
 
-   
-   
 </div>
 
  
