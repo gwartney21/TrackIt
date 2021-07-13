@@ -26,7 +26,7 @@
         <div class="col-md-4">
           <div class="card mt-3 mb-3 shadow-sm">
   
-            <div class="card-body updateCardBody">
+            <div class="card-body ">
               <div class="d-flex justify-content-between align-items-center">
                 <h5 class="text-white card-text">{{$jobs->JobName}}</h5>
                 <p class="bg-light text-dark card-text">{{$jobs->status}}</p>
@@ -74,7 +74,7 @@
 
 
 
-    <link rel="stylesheet" href="{{asset('css/jobList.css')}}">
+    <link rel="stylesheet" href="{{asset('css/index.css')}}">
 
 
   </body>

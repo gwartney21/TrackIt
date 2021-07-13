@@ -75,7 +75,7 @@
 
 
 
-    <link rel="stylesheet" href="{{asset('css/update.css')}}">
+    <link rel="stylesheet" href="{{asset('css/index.css')}}">
 
   </body>
 </html>

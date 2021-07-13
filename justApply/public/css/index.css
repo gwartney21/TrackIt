@@ -2,11 +2,27 @@ body{
     background-color:rgba(23, 28, 40, 1);
 }
 
-.formInput{
-  width: 100%;
-  max-width: 330px;
-  padding: 15px;
-  margin: auto;
-  background-color: white;
+
+
+body{
+    background-color:rgba(23, 28, 40, 1);
 }
 
+.btn{
+    margin-top: 1rem;
+    margin-left: 1rem;
+    background-color:rgb(85, 39, 237);
+    width: 90%;
+    margin-bottom: 1rem;
+}
+
+.card{
+    background-color: #1C212E;
+}
+
+
+.updateCardBody{
+    margin: auto;
+    margin-top: 10rem;
+    background-color: #1C212E;
+}
