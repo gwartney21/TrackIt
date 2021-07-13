@@ -2,36 +2,6 @@ body{
     background-color:rgba(23, 28, 40, 1);
 }
 
-
-
-#footer{
-    position: fixed;
-    left: 0;
-    bottom: 0;
-    width: 100%;
-}
-
-
-/*Input forum styling */
-
- form{
-    width: 389px;
-    height: auto;
-    margin-top: 1rem;
-    border-radius: 5px;
-}
-
-.form-control{
-    margin-top: 1rem;
-    width:93%;
-    margin-left: 1rem;
-}
-
-#dashboardHeader{
-    color: black;
-    text-align: center;
-}
-
 .btn{
     margin-top: 1rem;
     margin-left: 1rem;
@@ -40,62 +10,6 @@ body{
     margin-bottom: 1rem;
 }
 
-/* End Input forum styling */
-
-/* Events dashboard colum styling */
-#eventsCol{
-    margin-top: 8rem;
-}
-
-
-/* joblistCardDeckOverwrite*/
-
-.card-deck .card{
-    flex: auto;
-    height:auto;
-    margin-bottom: 1rem;
-    width: 30%;
-}
-
-/* Form search bar */
-.form-control{
-    margin-left: -12rem;
-   margin-top: 0px;
-}
-
-
-
-.changeData{
-    margin-left: 1px;
-    width: auto;
-}
-
-.pagination{
-    margin-left: 36rem;
-}
-
 .card{
     background-color: #1C212E;
-}
-
-h5{
-    color:white;
-}
-
-h4{
-    color: white;
-}
-
-p{
-    color: white;
-}
-
-.status{
-    background-color: #5527ED;
-    text-align: center;
-    height: 2rem;
-}
-
-.col{
-    margin-bottom: 3rem;
 }

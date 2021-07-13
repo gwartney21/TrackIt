@@ -15,44 +15,54 @@
 
   <x-navbar/>
 
+
+
+
   <div class="container">
-      <div class="card-deck">
-        @foreach($job as $jobs)
-          <div class="card">
-            <div class="card-body">
-              <div class="row">
-                <div class="col">
-                    <h5>{{$jobs->JobName}}</h5>
-                </div>
-                <div class="col status">
-                    <h5>{{$jobs->status}}</h5>
-                </div>
+
+
+      <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+      @foreach($job as $jobs)
+        <div class="col-md-4">
+          <div class="card mt-3 mb-3 shadow-sm">
+  
+            <div class="card-body updateCardBody">
+              <div class="d-flex justify-content-between align-items-center">
+                <h5 class="text-white card-text">{{$jobs->JobName}}</h5>
+                <p class="bg-light text-dark card-text">{{$jobs->status}}</p>
               </div>
-              <h4>{{$jobs->jobRole}}</h4>
+              <h4 class="text-white">{{$jobs->jobRole}}</h4>
               <a href="{{$jobs->jobLink}}">{{$jobs->jobLink}}</a>
-              <p>{{$jobs->jobInfo}}</p>
-                    
-                <div class="col">
+              <p class="text-white">{{$jobs->jobInfo}}</p>
+              <div class="d-flex justify-content-between align-items-center">
                 
-                <form class="changeData" action="/update">
-                              @csrf
-                              @method('PUT')
-                    <input name="update" value="{{$jobs->id}}" type="hidden" />
-                    <button class="btn btn-primary " type="submit">Update</button>
-                </form>  
-                
-                <form class="changeData" method="POST" action="/delete">
+                <div class="btn-group">
+                    <form class="changeData" action="/update">
+                                  @csrf
+                                  @method('PUT')
+                        <input name="update" value="{{$jobs->id}}" type="hidden" />
+                        <button class="btn btn-primary " type="submit">Update</button>
+                    </form>  
+
+                    <form class="changeData" method="POST" action="/delete">
                               @csrf
                               @method('delete')
                               <input name="deleteId" value="{{$jobs->id}}" type="hidden" />
                               <button class="btn btn-primary " type="submit">delete</button>
                            </form>
-                         </div>
-                    </div>
+                           
+                </div>
               </div>
+            </div>
+          </div>
+        </div>
+
       @endforeach
+    </div>
   </div>
-</div>
+
+
+
   <div class="container">
 
       {{$job->links()}}

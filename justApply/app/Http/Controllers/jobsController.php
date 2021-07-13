@@ -24,7 +24,8 @@ class jobsController extends Controller
             'JobName' => $request->JobName,
             'JobRole' => $request->JobRole,
             'JobLink' => $request->JobLink,
-            'JobInfo' => $request->JobInfo
+            'JobInfo' => $request->JobInfo,
+            'status'  => 'applied'
         ]);
 
         

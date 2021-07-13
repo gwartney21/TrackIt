@@ -16,89 +16,60 @@
 
     
   <x-navbar/>
+ 
 
+<div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
 
-<div class="container">
+                    <div class="card updateCardBody p-5">
+                              <div class="card-body">
+                              <h1 class="text-white" text-align-center>Update Status</h1>
+                                      <form class="changeData" method="POST" action="/updateStatus">
+                                      @csrf
+                                        <div class="form-check">
+                                              <input class="form-check-input" type="checkbox" name="update" value="applied" id="defaultCheck1">
+                                              <label class=" text-white form-check-label" for="defaultCheck1">
+                                                applied
+                                              </label>
+                                        </div>
 
-  <div class="row">
+                                        <div class="form-check">
+                                              <input class="form-check-input" type="checkbox" name="update" value="waiting for reply" id="defaultCheck1">
+                                              <label class=" text-white form-check-label" for="defaultCheck1">
+                                                  Waiting for Reply
+                                              </label>
+                                        </div>
 
-  <div class="col">
-    <div class="card">
-            <div class="card-body">
-              <form class="changeData" method="POST" action="/updateStatus">
-              @csrf
-                <div class="form-check">
-                      <input class="form-check-input" type="checkbox" name="update" value="applied" id="defaultCheck1">
-                      <label class="form-check-label" for="defaultCheck1">
-                         applied
-                      </label>
-                </div>
+                                        <div class="form-check">
+                                              <input class="form-check-input" type="checkbox" name="update" value="interview" id="defaultCheck1">
+                                              <label class=" text-white form-check-label" for="defaultCheck1">
+                                                Interviewing
+                                              </label>
+                                        </div>
 
-                <div class="form-check">
-                      <input class="form-check-input" type="checkbox" name="update" value="waiting for reply" id="defaultCheck1">
-                      <label class="form-check-label" for="defaultCheck1">
-                          Waiting for Reply
-                      </label>
-                </div>
+                                        
+                                        <div class="form-check">
+                                              <input class="form-check-input" type="checkbox" name="update" value="denied" id="defaultCheck1">
+                                              <label class=" text-white form-check-label" for="defaultCheck1">
+                                                Denied
+                                              </label>
+                                        </div>
 
-                <div class="form-check">
-                      <input class="form-check-input" type="checkbox" name="update" value="interview" id="defaultCheck1">
-                      <label class="form-check-label" for="defaultCheck1">
-                         Interviewing
-                      </label>
-                 </div>
-
-                 
-                <div class="form-check">
-                      <input class="form-check-input" type="checkbox" name="update" value="denied" id="defaultCheck1">
-                      <label class="form-check-label" for="defaultCheck1">
-                         Denied
-                      </label>
-                 </div>
-
-                 
-                <div class="form-check">
-                      <input class="form-check-input" type="checkbox" name="update" value="hired" id="defaultCheck1">
-                      <label class="form-check-label" for="defaultCheck1">
-                         Hired
-                      </label>
-                 </div>
-                      <input name="updateStatus" value="{{$id}}" type="hidden" />
-                      <button class="btn btn-primary">Update Status</button>
-                  </form>
+                                        
+                                        <div class="form-check">
+                                              <input class="form-check-input" type="checkbox" name="update" value="hired" id="defaultCheck1">
+                                              <label class=" text-white form-check-label" for="defaultCheck1">
+                                                Hired
+                                              </label>
+                                        </div>
+                                              <input name="updateStatus" value="{{$id}}" type="hidden" />
+                                              <button class="btn btn-primary">Update Status</button>
+                                          </form>
+                                      </div>
+                              </div>
+                      </div>
               </div>
-    </div>
-  </div>
+ 
 
-
-    <div class="col">
-
-        @foreach($job as $jobs)
-          <div class="card">
-            <div class="card-body">
-             
-              <div class="row">
-                <div class="col">
-                    <h5>{{$jobs->JobName}}</h5>
-                </div>
-                <div class="col status">
-                    <h5>{{$jobs->status}}</h5>
-                </div>
-              </div>
-              <h4>{{$jobs->jobRole}}</h4>
-              <a href="{{$jobs->jobLink}}">{{$jobs->jobLink}}</a>
-              <p>{{$jobs->jobInfo}}</p>
-            @endforeach
-         
-    </div>
-
-    </div>
-
-
-
-  </div>
-
-</div>
 
 
 
