@@ -31,16 +31,6 @@ To do this I completed the following.
 - I would then make sure to commit each new completed feature through version control.
 - Once Completed I would then take continue to follow the cycle until all designs and tasks were complete.
 
-## Main Project Files
-- Blade Templates: https://github.com/gwartney21/JustApply/tree/main/justApply/resources/views
-- Controlers: https://github.com/gwartney21/JustApply/tree/main/justApply/app/Http/Controllers
-- Routes: https://github.com/gwartney21/JustApply/blob/main/justApply/routes/web.php
-- Migrations: https://github.com/gwartney21/JustApply/tree/main/justApply/database/migrations
-- Factories: https://github.com/gwartney21/JustApply/tree/main/justApply/database/factories
-## Why I built the project this way
-- For this project specificly I chose to use blade server side rendering. The reason for this was to get exposure to using server side template rendering. With out having to set up a restapi. 
-- Along with this I decided to use laravel Breeze for user Authentication due to its simplicity. As I was not needing the extra features that come with other libarys such as laravel jetstream.
-- To help build the project designs. I also chose to use BootStrapVue to work with a 12 colum grid system.
 
 ## If I had more time I would change the following.
 - I would first reset the project to be based on a rest api. To help seperate front end and back end logic. I would also re implment the design using vue js to be able to utalize vue compoents.
