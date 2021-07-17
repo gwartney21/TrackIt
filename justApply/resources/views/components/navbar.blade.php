@@ -9,6 +9,9 @@
         <li class="nav-item">
           <a class="nav-link" href="/jobList">JobList</a>
         </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/dashboard">UserDashBoard</a>
+        </li>
       </ul>
       <form action="/search" method="POST"  class="d-flex">
          {{ csrf_field() }}

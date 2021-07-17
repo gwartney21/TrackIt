@@ -8,7 +8,7 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 
-    <title>Hello, world!</title>
+  
   </head>
 
   <body>
@@ -19,7 +19,6 @@
 
 
   <div class="container">
-
 
       <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
       @foreach($job as $jobs)

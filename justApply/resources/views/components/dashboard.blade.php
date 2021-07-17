@@ -8,7 +8,7 @@
         
         <div class="form-group row formInput">
          
-          <input type="text" class="mb-2 form-control" id="exampleFormControlInput1" name="JobName" >
+          <input type="text" class="mb-2 form-control" id="exampleFormControlInput1" name="JobName" placeholder="JobName">
         
           <input type="text" class="mb-2 form-control" id="exampleFormControlInput2" name="JobRole" placeholder="Job Role">
       
