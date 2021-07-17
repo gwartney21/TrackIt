@@ -31,15 +31,6 @@ To do this I completed the following.
 - I would then make sure to commit each new completed feature through version control.
 - Once Completed I would then take continue to follow the cycle until all designs and tasks were complete.
 
-## How to navigate project files
-- Blade Templates: [Link to example code on GitHub]
-- Controler logic: [Link to example code on GitHub]
-- Web Routes
-
-## Why I built the project this way
-- For this project specificly I chose to use blade server side rendering. The reason for this was to get exposure to using server side template rendering. With out having to set up a restapi. 
-- Along with this I decided to use laravel Breeze for user Authentication due to its simplicity. As I was not needing the extra features that come with other libarys such as laravel jetstream.
-- To help build the project designs. I also chose to use BootStrapVue to work with a 12 colum grid system.
 
 ## If I had more time I would change the following.
 - I would first reset the project to be based on a rest api. To help seperate front end and back end logic. I would also re implment the design using vue js to be able to utalize vue compoents.
@@ -55,10 +46,62 @@ I would also have liked to add additinal features from the orignal mock up.
 
 ## Deployment
 
-To deploy this project run
+To deploy this project run the folowing.
 
+Intall composer dependeinces
 ```bash
-  npm run deploy
+  composer install
+```
+Install npm dependeinces
+```bash
+  npm install
+```
+Create new .env file
+```bash
+ cp .env.example .env
+```
+Generate the app key
+```bash
+php artisan key:generate
 ```
 
-  
+Create an empty database for the project using the database tools you prefer.
+For this project I used table plus
+
+```bash
+Database Name created for project: "justApply"
+```
+
+In the .env file, add database information to allow Laravel to connect to the database
+
+```bash
+Eaample env info to connect to databasse:
+  DB_CONNECTION=mysql
+  DB_HOST=mysql
+  DB_PORT=3306
+  DB_DATABASE=justApply
+  DB_USERNAME=root
+  DB_PASSWORD=password
+```
+
+To start the server up I am using laravel Sail. Before we can migrate the datbase you will need to run the following to start the server. 
+```bash
+./vendor/bin/sail up
+```
+Once the server is started open a new comand line and enter the following.
+
+```bash
+./vendor/bin/sail php artisan migrate
+```
+Next seed the database using the following comand
+```bash
+./vendor/bin/sail php artisan db:seed
+```
+Once the database is seeded you can then get a random user from teh database. 
+And go to the following url.
+```bash
+User password is : "password"
+http://0.0.0.0/login
+```
+From here you can now begin  viewing the  job list adding jobs to the list as well as updating jobs. All shown in the gif above.
+You can also refer to the routes listed above to help navigate the aplication.
