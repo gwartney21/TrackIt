@@ -1,5 +1,5 @@
 ## About Project
-JustApply allows users to take and keep track of all their job applications. As well as update their application status. 
+JustApply is an MVP job tracking application that allows users to take and keep track of all their job applications. As well as update their application status. 
 This application is built with Laravel/Blade, BootstrapVue, while utilizing Laravel/Breeze for user authentication and the Eloquent ORM to handle user data.
 
 ## Specific features added to the project
