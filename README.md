@@ -23,6 +23,8 @@ To come up with the project designs I researched similar applications and derive
 ![App Screenshot](https://raw.githubusercontent.com/gwartney21/JustApply/main/Designr2Redone.PNG)
 
 ## Curent project design
+To come up with the project designs I researched similar applications and derived inspiration for the designs. I then took and gathered them all and placed them into a mood board.
+
 ![App Screenshot](https://raw.githubusercontent.com/gwartney21/JustApply/main/Screen%20Shot%202021-07-17%20at%201.28.41%20PM.png)
 
 ![App Screenshot](https://raw.githubusercontent.com/gwartney21/JustApply/main/Screen%20Shot%202021-07-17%20at%201.28.53%20PM.png)
