@@ -17,6 +17,7 @@ JustApply is an MVP job tracking application that helps users keep track of job 
 
 
 ## First project design ideas
+To come up with the project designs I researched similar applications and derived inspiration for the designs. I then took and gathered them all and placed them into a mood board.
 
 ![App Screenshot](https://raw.githubusercontent.com/gwartney21/JustApply/main/DesignRedone.PNG)
 ![App Screenshot](https://raw.githubusercontent.com/gwartney21/JustApply/main/Designr2Redone.PNG)
