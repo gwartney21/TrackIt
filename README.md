@@ -4,9 +4,10 @@ JustApply is an MVP job tracking application that helps users keep track of job 
 
 ## Features added to the project
 
-- Implemented user account creation/Authentication.
-- Implemented ability to create job application listing to be tracked on a user's account.
+- Created user account creation/Authentication using Laravel Breeze.
+- Added ability to create job application listing to be tracked on a user's account.
 - Implemented ability to update job application status.
+
 
 ## Project demo
 ![Project Demo](https://github.com/gwartney21/JustApply/blob/main/Screen%20Recording%202021-07-17%20at%201.29.27%20PM.gif)
