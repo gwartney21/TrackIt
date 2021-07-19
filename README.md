@@ -1,8 +1,6 @@
 ## About Project
 
-Skills- Laravel-Blade / BootstrapVue / Laravel-Breeze / Eloquent ORM / Laravel-Sail
-
-JustApply an MVP job tracking application that helps users keep track of job application listings and the application status.
+JustApply is an MVP job tracking application that helps users keep track of job application listings and the application status.  From designing, to planning out the functionality, data structure, and logic flows, I developed this full application by implementing my skills in  Laravel-Blade, BootstrapVue, Laravel-Breeze, Eloquent ORM and Laravel-Sail.
 
 ## Features added to the project
 
